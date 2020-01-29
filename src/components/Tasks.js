@@ -14,7 +14,7 @@ export const Tasks = () => {
 	console.log(tasks);
 	let projectName = "";
 
-	if (projects && selectedProject && !collatedTasksExist(selectedProject)) {
+	if (projects.length > 0  && selectedProject && !collatedTasksExist(selectedProject)) {
 		projectName = getTitle(projects, selectedProject).name;
 		console.log("projectname 1", projectName);
 	}
@@ -35,7 +35,7 @@ export const Tasks = () => {
 			<ul className="tasks__list">
 				{tasks.map(task => (
 					<li key={`${task.id}`}>
-						<Checkbox id={task.id} />
+						<Checkbox id={task.id} taskDesc={task.task} />
 						<span>{task.task}</span>
 					</li>
 				))}

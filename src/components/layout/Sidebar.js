@@ -18,50 +18,86 @@ export const Sidebar = () => {
 		<div className="sidebar" data-testid="sidebar">
 			<ul className="sidebar__generic">
 				<li
-					data-testid="inbox"
 					className={active === "inbox" ? "active" : undefined}
-					onClick={() => {
-						setActive("inbox");
-						setSelectedProject("INBOX");
-					}}
+					data-testid="inbox"
 				>
-					<span>
-						<FaInbox />
-					</span>
-					<span>Inbox</span>
+					<div
+						role="button"
+						data-testid="inbox-action"
+						aria-label="Show inbox tasks"
+						tabIndex={0}
+						onClick={() => {
+							setActive("inbox");
+							setSelectedProject("INBOX");
+						}}
+						onKeyDown={() => {
+							setActive("inbox");
+							setSelectedProject("INBOX");
+						}}
+					>
+						<span>
+							<FaInbox />
+						</span>
+						<span>Inbox</span>
+					</div>
 				</li>
 				<li
 					data-testid="today"
 					className={active === "today" ? "active" : undefined}
-					onClick={() => {
-						setActive("today");
-						setSelectedProject("TODAY");
-					}}
 				>
-					<span>
-						<FaRegCalendar />
-					</span>
-					<span>Today</span>
+					<div
+						data-testid="today-action"
+						aria-label="Show today's tasks"
+						tabIndex={0}
+						role="button"
+						onClick={() => {
+							setActive("today");
+							setSelectedProject("TODAY");
+						}}
+						onKeyDown={() => {
+							setActive("today");
+							setSelectedProject("TODAY");
+						}}
+					>
+						<span>
+							<FaRegCalendar />
+						</span>
+						<span>Today</span>
+					</div>
 				</li>
 				<li
 					data-testid="next_7"
 					className={active === "next_7" ? "active" : undefined}
-					onClick={() => {
-						setActive("next_7");
-						setSelectedProject("NEXT_7");
-					}}
 				>
+					<div
+						data-testid="next_7-action"
+						aria-label="Show tasks for the next 7 days"
+						tabIndex={0}
+						role="button"
+						onClick={() => {
+							setActive("next_7");
+							setSelectedProject("NEXT_7");
+						}}
+						onKeyDown={() => {
+							setActive("next_7");
+							setSelectedProject("NEXT_7");
+						}}
+					></div>
 					<span>
-						<FaRegCalendar />
+						<FaRegCalendarAlt />
 					</span>
 					<span>Next 7 Days</span>
 				</li>
 			</ul>
 			<div
 				className="sidebar__middle"
+				aria-label="Show/hide projects"
+				role="button"
+				tabIndex={0}
 				onClick={() => {
 					setShowProjects(!showProjects);
 				}}
+				onKeyDown={() => setShowProjects(!showProjects)}
 			>
 				<span>
 					<FaChevronDown

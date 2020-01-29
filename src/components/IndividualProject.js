@@ -6,7 +6,7 @@ import { useProjectsValue, useSelectedProjectValue } from "../context";
 export const IndividualProject = ({ project }) => {
 	const [showConfirm, setShowConfirm] = useState();
 	const { projects, setProjects } = useProjectsValue();
-	const { selectedProject, setSelectedProject } = useSelectedProjectValue();
+	const { setSelectedProject } = useSelectedProjectValue();
 
 	const deleteProject = docId => {
 		firebase
