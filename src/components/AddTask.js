@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { firebase } from "../fireabse";
+import { firebase } from "../firebase";
 import moment from "moment";
 import { useSelectedProjectValue } from "../context";
 import { FaRegListAlt, FaRegCalendarAlt } from "react-icons/fa";

@@ -82,11 +82,12 @@ export const Sidebar = () => {
 							setActive("next_7");
 							setSelectedProject("NEXT_7");
 						}}
-					></div>
-					<span>
-						<FaRegCalendarAlt />
-					</span>
-					<span>Next 7 Days</span>
+					>
+						<span>
+							<FaRegCalendarAlt />
+						</span>
+						<span>Next 7 Days</span>
+					</div>
 				</li>
 			</ul>
 			<div
