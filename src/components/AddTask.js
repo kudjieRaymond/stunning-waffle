@@ -119,6 +119,7 @@ export const AddTask = ({
 					/>
 
 					<input
+						data-testid="add-task-content"
 						aria-label="Enter your task"
 						type="text"
 						value={task}
