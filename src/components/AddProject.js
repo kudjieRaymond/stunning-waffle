@@ -41,7 +41,7 @@ export const AddProject = ({ shouldShow = false }) => {
 					/>
 					<button
 						className="add-project__submit"
-						data-test-id="add-project-submit"
+						data-testid="add-project-submit"
 						type="button"
 						onClick={() => addProject()}
 					>
