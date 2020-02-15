@@ -3,33 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dotenv": "^8.2.0",
     "firebase": "^7.2.3",
-		"moment": "^2.24.0",
+    "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-icons": "^3.8.0",
     "react-scripts": "3.2.0"
-	},
-	"devDependencies": {
-		"@testing-library/react": "9.4.0"
-
-	},
+  },
+  "devDependencies": {
+    "@testing-library/react": "9.4.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-	},
-	"jest":{
-		"collectCoverageFrom" : [
-			"src/**/*.js",
-			"!src/index.js",
-			"!src/hooks/*.js",
-			"!src/context/*.js"
-
-		],
-		"coverageThreshold": {
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/hooks/*.js",
+      "!src/context/*.js"
+    ],
+    "coverageThreshold": {
       "global": {
         "branches": 90,
         "functions": 90,
@@ -41,7 +40,7 @@
       "html",
       "text"
     ]
-	},
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
